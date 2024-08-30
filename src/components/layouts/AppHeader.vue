@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <header>
-    <div class="fixed left-0 top-0 z-10 w-scren-xl transition-colors duration-300">
-      <div class="px-0.5 lg:px-1 h-16 flex items-center justify-between">
+  <header class="sticky top-0 left-0 z-20">
+    <div class="shadow-sm shadow-gray-200 backdrop-blur-md dark:shadow-gray-600">
+      <div class="flex items-center justify-between h-16 px-4 py-2 md:px-8">
         <div class="w-auto">
           <div>
             <a href="">
