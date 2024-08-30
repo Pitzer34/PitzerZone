@@ -4,7 +4,11 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../pages/public/Home.vue'),
+    components: {
+      default: () => import('..//pages/Home.vue'),
+      Header: () => import('../components/layouts/AppHeader.vue'),
+      Footer: () => import('../components/layouts/AppFooter.vue'),
+    },
   },
   // {
   //   path: '/vitepress',

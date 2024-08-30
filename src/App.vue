@@ -1,13 +1,14 @@
 <script setup>
-import Home from './pages/public/Home.vue';
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 
 </script>
 
 <template>
-  <!-- <Home /> -->
-  <RouterLink to="/">home</RouterLink>
-  <RouterView></RouterView>
+  <div class="flex flex-col min-h-screen">
+    <RouterView name="Header" />
+    <RouterView />
+    <RouterView name="Footer" />
+  </div>
 </template>
 
 <style scoped></style>
