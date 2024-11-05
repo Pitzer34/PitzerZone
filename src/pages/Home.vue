@@ -1,4 +1,58 @@
 <script setup>
+import { ref } from 'vue';
+import InputText from 'primevue/inputtext';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { useFirebaseAuth, useDocument, useCollection } from 'vuefire'
+import { collection, doc, getFirestore } from 'firebase/firestore';
+import { database } from '../services/firebaseApp';
+
+// const account = ref('');
+// const password = ref('');
+
+// const auth = useFirebaseAuth();
+// const signUp = async () => {
+//   try {
+//     const res = await createUserWithEmailAndPassword(auth, account.value, password.value)
+//     console.log(res.user)
+//   } catch (error) {
+//     console.log(error.message)
+//     console.log(error.code)
+//   }
+// }
+
+// const signIn = async () => {
+//   try {
+//     const res = await signInWithEmailAndPassword(auth, account.value, password.value);
+//     console.log(res.user)
+//   } catch (error) {
+//     console.log(error.message)
+//     console.log(error.code)
+//   }
+// };
+
+// const db = getFirestore();
+// const table = collection(db, 'testData');
+// const data = useCollection(table);
+// console.log(data);
+
+const block1Data = ref([{
+  title: 'function',
+  img: '',
+  content: 'this function feature content',
+}, {
+  title: 'function',
+  img: '',
+  content: 'this function feature content',
+}, {
+  title: 'function',
+  img: '',
+  content: 'this function feature content',
+}, {
+  title: 'function',
+  img: '',
+  content: 'this function feature content',
+},])
+
 
 </script>
 
@@ -15,16 +69,42 @@
               PitzerZone
             </div>
             <div class="text-lg">
-              撰寫一些自我學習的小專案與技術筆記, 希望讓自己永遠保持動力, 歡迎參觀~~
+              {{ "撰寫一些自我學習的小專案與技術筆記, 希望讓自己永遠保持動力, 歡迎參觀~~" }}
             </div>
           </div>
         </div>
       </div>
-      <div class="border-2">
-        toolbar1
+      <div class="py-1">
+        <div class="py-4">
+          {{ "區塊一" }}
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div v-for="(item, index) in block1Data" :key="index" class="h-28 border-2 p-2">
+            <div>
+              <div>{{ item.img }}</div>
+              <div>{{ item.title }}</div>
+            </div>
+            <div class="text-ellipsis">
+              {{ item.content }}
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="border-2">
-        toolbar2
+      <div class="py-1">
+        <div class="py-4">
+          {{ "區塊一" }}
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div v-for="(item, index) in block1Data" :key="index" class="h-28 border-2 p-2">
+            <div>
+              <div>{{ item.img }}</div>
+              <div>{{ item.title }}</div>
+            </div>
+            <div class="text-ellipsis">
+              {{ item.content }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

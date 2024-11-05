@@ -4,11 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    components: {
-      default: () => import('../pages/Home.vue'),
-      Header: () => import('../components/layouts/AppHeader.vue'),
-      Footer: () => import('../components/layouts/AppFooter.vue'),
-    },
+    component: () => import('../pages/Home.vue'),
     // children: [
     //   {
     //     path: 'home',
