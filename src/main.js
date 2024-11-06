@@ -6,7 +6,7 @@ import { PrimeVue } from '@primevue/core'; // PrimeVue
 import Aura from '@primevue/themes/aura'; // pluge: PrimeVue-Style
 import router from './router/index'; // VueRouter
 import { VueFire, VueFireAuth } from 'vuefire';
-import { firebaseApp } from './services/firebaseApp';
+import { getFirebase } from './services/firebaseApp';
 
 //* Setting
 const app = createApp(App);
@@ -27,8 +27,9 @@ app.use(PrimeVue, {
     },
   },
 });
+const { firebaseApp } = getFirebase();
 app.use(VueFire, {
-  firebaseApp: firebaseApp,
+  firebaseApp,
   modules: [VueFireAuth()],
 });
 
