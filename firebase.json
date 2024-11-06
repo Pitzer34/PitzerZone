@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "/PitzerZone/**",
-        "destination": "/PitzerZone/index.html"
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }

@@ -31,7 +31,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/PitzerZone'),
+  //history: createWebHistory('/PitzerZone'),
+  history: createWebHistory(),
   routes: routes,
 });
 

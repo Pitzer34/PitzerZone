@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "pitzer-58dc4"
-  }
+    "default": "pitzer-zone",
+    "prd": "pitzer-zone"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -4,13 +4,13 @@ import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyA1EPDC2kMF-Di3BSCUhBQiVKpN3YobVFs',
-  authDomain: 'pitzer-58dc4.firebaseapp.com',
-  projectId: 'pitzer-58dc4',
-  storageBucket: 'pitzer-58dc4.firebasestorage.app',
-  messagingSenderId: '372651435376',
-  appId: '1:372651435376:web:ad46bf585a04f43bbbdbb5',
-  measurementId: 'G-EM1SXVDWJV',
+  apiKey: 'AIzaSyDVX8QPQGGsFgTrKpyeI0fAEqZUVku_nPE',
+  authDomain: 'pitzer-zone.firebaseapp.com',
+  projectId: 'pitzer-zone',
+  storageBucket: 'pitzer-zone.firebasestorage.app',
+  messagingSenderId: '328936030889',
+  appId: '1:328936030889:web:ef6a2755d22d1f57b85fb8',
+  measurementId: 'G-R00YQJMB14',
 };
 
 /**
