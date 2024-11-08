@@ -87,7 +87,7 @@ const block1Data = ref([{
         </div>
         <div class="grid grid-cols-3 gap-4">
           <div v-for="(item, index) in block1Data" :key="index" class="">
-            <Card class="">
+            <Card>
               <template #title>{{ item.title }}</template>
               <template #content>
                 <p class="m-0">

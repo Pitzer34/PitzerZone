@@ -1,5 +1,16 @@
 <script setup>
 import { Icon } from '@iconify/vue';
+import Tooltip from 'primevue/tooltip'; // pluge: PrimeVue-tooltip
+
+defineOptions({
+  directives: {
+    tooltip: Tooltip
+  }
+})
+
+const toggleDarkMode = () => {
+  document.documentElement.classList.toggle('zone-dark');
+};
 
 </script>
 
@@ -14,25 +25,22 @@ import { Icon } from '@iconify/vue';
           <h1 class="text-2xl font-bold">{{ "Header" }}</h1>
         </div>
         <div class="flex items-center gap-8">
-          <ul class="flex gap-2">
-            <li>
-              <Icon icon="mdi:github" width="2rem" heigth="2rem" />
+          <ul class="flex gap-4">
+            <li v-tooltip.bottom="'Go to Github Page'">
+              <a href="https://github.com/Pitzer34" target="_blank">
+                <Icon icon="mdi:github" width="2rem" heigth="2rem" />
+              </a>
             </li>
             <li>
               <Icon icon="mdi:linkedin" width="2rem" heigth="2rem" />
             </li>
-            <li>
+            <li @click="" v-tooltip.bottom="'Copy my email address'">
               <Icon icon="mdi:email-outline" width="2rem" heigth="2rem" />
             </li>
           </ul>
-          <div>
+          <div @click="toggleDarkMode">
             <Icon icon="mdi:theme-light-dark" width="2rem" height="2rem" />
           </div>
-          <!-- <ul class="flex">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul> -->
         </div>
       </div>
     </div>
